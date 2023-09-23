@@ -34,6 +34,7 @@ public class Ventana extends javax.swing.JFrame {
         mitLista = new javax.swing.JMenuItem();
         mitTree = new javax.swing.JMenuItem();
         mitBarra = new javax.swing.JMenuItem();
+        mitCalculadora = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,6 +85,14 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
         jMenu1.add(mitBarra);
+
+        mitCalculadora.setText("Calculadora");
+        mitCalculadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mitCalculadoraActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mitCalculadora);
 
         jMenuBar1.add(jMenu1);
 
@@ -158,6 +167,12 @@ public class Ventana extends javax.swing.JFrame {
         ventanaSecundaria.setVisible(true);
     }//GEN-LAST:event_mitBarraActionPerformed
 
+    private void mitCalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mitCalculadoraActionPerformed
+        Calculadora ventanaSecundaria = new Calculadora(this, true);
+        ventanaSecundaria.pack();
+        ventanaSecundaria.setVisible(true);
+    }//GEN-LAST:event_mitCalculadoraActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -198,6 +213,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem mitBarra;
+    private javax.swing.JMenuItem mitCalculadora;
     private javax.swing.JMenuItem mitCheckbox;
     private javax.swing.JMenuItem mitColores;
     private javax.swing.JMenuItem mitLista;
