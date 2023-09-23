@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package interfaces;
-
 /**
  *
  * @author Li
@@ -14,7 +13,8 @@ public class Interfaces {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Ventana ventanaSecundaria = new Ventana();
+        ventanaSecundaria.setVisible(true);
     }
     
 }
