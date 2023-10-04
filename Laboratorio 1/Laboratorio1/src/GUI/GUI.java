@@ -2,6 +2,7 @@ package GUI;
 
 import javax.swing.JOptionPane;
 import Proyect.*;
+
 /**
  *
  * @author Li
@@ -10,13 +11,11 @@ public class GUI extends javax.swing.JFrame {
 
     int opcion = 0;
     int quantityCustomers = 0;
-  
+
     public GUI() {
         initComponents();
     }
 
-    
-        
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -127,30 +126,30 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSimularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimularActionPerformed
-       
-            try{
-                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Menu de Opciones\n\n"
-                        + "Menu\n"
-                        + "1. Banco\n"
-                        + "2. Salir\n"
-                        + "Seleccione una opción:"));
-                 
-                 
-                 switch (opcion) {
-                    case 1:
-                        quantityCustomers = Integer.parseInt(JOptionPane.showInputDialog(null ,"Ingrese la cantidad de clientes que llegarán al banco: "));
-                         Simulation.simulateBank(quantityCustomers, txtTiempo, txtClientes, txtCajas);
-                        break;
-                    case 2:
-                        System.exit(0);
-                }
-                
-                 
-                 
-            }catch (NumberFormatException e) {
 
+        try {
+            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Menu de Opciones\n\n"
+                    + "Menu\n"
+                    + "1. Banco\n"
+                    + "2. Salir\n"
+                    + "Seleccione una opción:"));
+
+            switch (opcion) {
+                case 1:
+                    quantityCustomers = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de clientes que llegarán al banco: "));
+                    txtTiempo.setText("");
+                    txtClientes.setText("");
+                    txtCajas.setText("");
+                    Simulation.simulateBank(quantityCustomers, txtTiempo, txtClientes, txtCajas);
+                    break;
+                case 2:
+                    System.exit(0);
             }
-        
+
+        } catch (NumberFormatException e) {
+
+        }
+
     }//GEN-LAST:event_btnSimularActionPerformed
 
 
